@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --accent-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.profile-info h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.job {
+    margin-bottom: 1.5rem;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.job-title {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.job-company {
+    font-weight: bold;
+}
+
+.job-date {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.job-description ul {
+    padding-left: 1.5rem;
+}
+
+.job-description li {
+    margin-bottom: 0.3rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language-name {
+    font-weight: bold;
+}
+
+.language-level {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.education-item {
+    margin-bottom: 1rem;
+}
+
+.education-title {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.education-institution {
+    font-style: italic;
+}
+
+.education-date {
+    color: var(--secondary-color);
+}
+
+.about-me p {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--secondary-color);
+    color: var(--dark-color);
+    font-size: 0.9rem;
+}
