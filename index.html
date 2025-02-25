@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Борис Шакун - Python Developer</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --accent-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+        .profile-info h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-info h2 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            text-align: right;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .job {
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .job-company {
+            font-weight: bold;
+        }
+        
+        .job-date {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+        
+        .job-description ul {
+            padding-left: 1.5rem;
+        }
+        
+        .job-description li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+        
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .language {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .language-name {
+            font-weight: bold;
+        }
+        
+        .language-level {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+        
+        .education-item {
+            margin-bottom: 1rem;
+        }
+        
+        .education-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .education-institution {
+            font-style: italic;
+        }
+        
+        .education-date {
+            color: var(--secondary-color);
+        }
+        
+        .about-me p {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--secondary-color);
+            color: var(--dark-color);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-info">
+                <h1>Борис Шакун</h1>
+                <h2>Python Developer</h2>
+            </div>
+            <div class="contact-info">
+                <p><i class="icon"></i> +7 (989) 615-11-84</p>
+                <p><i class="icon"></i> <a href="mailto:shakun.boris@gmail.com">shakun.boris@gmail.com</a></p>
+                <p><i class="icon"></i> Москва, Россия</p>
+                <p>Возраст: 35 лет (17.02.1990)</p>
+            </div>
+        </header>
+        
+        <section class="about-me">
+            <h3 class="section-title">Обо мне</h3>
+            <p>Опытный Python разработчик с более чем 11-летним стажем в разработке веб-приложений, автоматизации бизнес-процессов и создании микросервисных архитектур. Специализируюсь на Django, Flask и работе с высоконагруженными системами. Имею опыт работы с DevOps, CI/CD и контейнеризацией.</p>
+            <p>В настоящее время проживаю во Вьетнаме (г. Дананг), готов к удаленной работе, переезду и командировкам.</p>
+        </section>
+        
+        <section class="experience">
+            <h3 class="section-title">Опыт работы</h3>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Менеджер проектов по автоматизации бизнес-процессов (BPO)</div>
+                        <div class="job-company">Cattle Care Inc., California Dairy Analytics Software</div>
+                    </div>
+                    <div class="job-date">Август 2024 — настоящее время (7 месяцев)</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Организация и координация внешних ресурсов для успешной реализации проектов</li>
+                        <li>Разработка и внедрение решений для базовой автоматизации бизнес-процессов с использованием JavaScript и Python</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Программист-разработчик Python, JS</div>
+                        <div class="job-company">Фриланс</div>
+                    </div>
+                    <div class="job-date">Февраль 2022 — Июль 2024 (2 года 6 месяцев)</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Разработка платформы для международной торговли сельскохозяйственной продукцией на Django</li>
+                        <li>Создание Flask приложения для розничной торговли нутом в Израиле</li>
+                        <li>Реализация серверной части (DevOps) для стартап проекта "Голосовой помощник Катюша"</li>
+                        <li>Разработка сайта-showcase для кинорежиссера и колориста на Django</li>
+                        <li>Разработка и внедрение плагинов для Adobe After Effects</li>
+                        <li>Консультирование по принятию инженерных решений</li>
+                        <li>Разработка микросервисных архитектур для высоконагруженных веб-сервисов</li>
+                        <li>Управление конвейерами CI/CD с использованием GitHub CI/CD и Docker</li>
+                        <li>Разработка приложений для обработки и анализа данных на Python</li>
+                        <li>Рефакторинг и оптимизация интернет-магазинов</li>
+                        <li>Проектирование и оптимизация базы данных PostgreSQL</li>
+                        <li>Администрирование систем на Linux, автоматизация операционных задач</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Программист 1С, Системный администратор</div>
+                        <div class="job-company">NovaService-Azov</div>
+                    </div>
+                    <div class="job-date">Июнь 2013 — Февраль 2022 (8 лет 9 месяцев)</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Создание корпоративного мессенджера на базе Firebase с реализацией сквозного шифрования</li>
+                        <li>Разработка сайта компании</li>
+                        <li>Развертывание и настройка локальной сети</li>
+                        <li>Автоматизация бизнес-процессов</li>
+                        <li>Настройка 1С бухгалтерии для нужд компании</li>
+                        <li>Работа с документами и оформление экспортной документации</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="skills">
+            <h3 class="section-title">Технические навыки</h3>
+            <div class="skills-container">
+                <span class="skill">Python</span>
+                <span class="skill">Django</span>
+                <span class="skill">Django REST</span>
+                <span class="skill">Flask</span>
+                <span class="skill">PostgreSQL</span>
+                <span class="skill">Celery</span>
+                <span class="skill">Redis</span>
+                <span class="skill">Docker</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Nginx</span>
+                <span class="skill">Gunicorn</span>
+                <span class="skill">Linux</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">CI/CD</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">1C</span>
+                <span class="skill">Bash</span>
+            </div>
+        </section>
+        
+        <section class="languages">
+            <h3 class="section-title">Языки</h3>
+            <div class="languages">
+                <div class="language">
+                    <span class="language-name">Русский</span>
+                    <span class="language-level">Родной</span>
+                </div>
+                <div class="language">
+                    <span class="language-name">Английский</span>
+                    <span class="language-level">C1 — Продвинутый</span>
+                </div>
+                <div class="language">
+                    <span class="language-name">Испанский</span>
+                    <span class="language-level">B2 — Средне-продвинутый</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="education">
+            <h3 class="section-title">Образование и курсы</h3>
+            
+            <div class="education-item">
+                <div class="education-title">Бакалавр, Информационные системы и технологии</div>
+                <div class="education-institution">Южный федеральный университет, Институт математики, механики и компьютерных наук им. И.И. Воровича</div>
+                <div class="education-date">2017</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-title">CS50's Web Programming with Python and JavaScript</div>
+                <div class="education-institution">Harvard</div>
+                <div class="education-date">2023</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-title">CS50's Introduction to Artificial Intelligence with Python</div>
+                <div class="education-institution">Harvard</div>
+                <div class="education-date">2023</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-title">CS50's Introduction to Computer Science</div>
+                <div class="education-institution">Harvard</div>
+                <div class="education-date">2022</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-title">Python Basics</div>
+                <div class="education-institution">Higher School of Economics</div>
+                <div class="education-date">2022</div>
+            </div>
+        </section>
+        
+        <section class="additional">
+            <h3 class="section-title">Дополнительная информация</h3>
+            <ul>
+                <li>Права категории B</li>
+                <li>Готов к переезду и командировкам</li>
+                <li>Для связи предпочтителен WhatsApp</li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>© 2025 Борис Шакун | Последнее обновление: Февраль 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
